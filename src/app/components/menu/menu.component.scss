@@ -1,0 +1,409 @@
+@mixin common-font{
+    color: #65758B;
+    font-family: 'graphik-medium';
+    cursor: pointer;
+}
+
+@mixin change-Color{
+    background: #F4FAFF;
+    color: #2776BB;
+}
+
+@media screen and (max-width:7680px) and (min-width:1680px){
+    ul{
+        display: block;
+        list-style-type: none;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
+        li{
+            @include common-font;
+            width: 100%;
+            height: 5.625rem;
+            padding-left: 36px;
+            padding-right: 30px;
+            div{
+                width: 11.25rem;
+                height: 5.625rem;
+                float: left;
+                margin-left: .625rem;
+                font-size: 1.25rem;
+                float: left;
+                line-height: 5.625rem;
+                vertical-align: top;
+                cursor: pointer;
+            }
+            i{
+                width: 1.75rem;
+                height: 5.625rem;
+                vertical-align:sub;
+                float: left;
+                line-height: 5.625rem;
+                text-align: left;
+                cursor: pointer;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .main-menu-title{
+        @include common-font;
+        width: 100%;
+        height: 3.125rem;
+        line-height: 3.5rem;
+        padding-left: 2.25rem;
+        padding-right: 1.875rem;
+        .ro_menu_title{
+            line-height: 3.375rem;
+            height: 2.5rem;
+            font-size: 1.125rem;
+        }
+        .ro_menu_btn{
+            float: right;
+            width: 3.125rem;
+            line-height: 3.125rem;
+            height: 2.5rem;
+            font-size: 1.25rem;
+            margin-top: .4375rem;
+            margin-left: 6.25rem;
+        }
+    }
+    .bip-nav-wrap{
+        .menu-item{
+            &:hover {
+                opacity: 0.8;
+            }
+            &:first-child{
+                @include change-Color;
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-home.svg) no-repeat center left;
+                }  
+                &.active {
+                    .material-icons {
+                        background: url(../../../assets/images/menu-icon-home-hover.svg) no-repeat center left;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-request.svg) no-repeat center left;
+                }
+            }
+            &:nth-child(3) {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-query.svg) no-repeat center left;
+                }
+            }
+            &:nth-child(4) {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-compliance.svg) no-repeat center left;
+                }
+            }
+            &:nth-child(5) {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-reference.svg) no-repeat center left;
+                }
+            }
+            &:last-child {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-faqs.svg) no-repeat center left;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1679px) and (min-width:1360px){
+    ul{
+        display: block;
+        list-style-type: none;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
+        margin: 0;
+        width: 100%;
+        li{
+           
+            div{
+                width: 11.25rem;
+                height: 5.625rem;
+                float: left;
+                margin-left: .625rem;
+                font-size: 1.25rem;
+                float: left;
+                line-height: 5.625rem;
+                vertical-align: top;
+                cursor: pointer;
+            }
+            i{
+                width: 1.75rem;
+                height: 5.625rem;
+                vertical-align:sub;
+                float: left;
+                line-height: 5.625rem;
+                text-align: left;
+                cursor: pointer;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .menu{
+        width: 20rem;
+    }
+
+    .menu-item{
+        padding-left: 2.25rem;
+        padding-right: 1.875rem;
+    }
+
+    .small-menu{
+        width: 5rem;
+    }
+
+    .small-main-menu-title{
+        @include common-font;
+        height: 3.125rem;
+        line-height: 3.5rem;
+        padding-left: 1.2rem;
+    }
+
+    .small-menu-item{
+        @include common-font;
+        width: calc(100% - 4.125rem);
+        height: 5.625rem;
+        padding-left: 1.25rem;
+        padding-right: 1.875rem;
+    }
+
+    .main-menu-title{
+        @include common-font;
+        height: 3.125rem;
+        line-height: 3.5rem;
+        padding-left: 2.25rem;
+        padding-right: 1.875rem;
+        .ro_menu_title{
+            line-height: 3.375rem;
+            height: 2.5rem;
+            font-size: 1.125rem;
+        }
+        .ro_menu_btn{
+            float: right;
+            width: 3.125rem;
+            line-height: 3.125rem;
+            height: 2.5rem;
+            font-size: 1.25rem;
+            margin-top: .4375rem;
+            margin-left: 6.25rem;
+            .menu-title-icon{
+                float: left;
+                width: 1.75rem;
+                height: 2.5rem;
+                line-height: 2.5rem;
+                text-align: left;
+                cursor: pointer;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .menu-title-icon{
+        font-family: 'Material Icons';
+        width: 25px;
+        height: 25px;
+    }
+    .bip-nav-wrap{
+        .menu-item,.small-menu-item{
+            @include common-font;
+            width: calc(100% - 4.125rem);
+            height: 5.625rem;
+            
+            &:hover {
+                opacity: 0.8;
+            }
+            &:first-child{
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-home.svg) no-repeat center left;
+                }  
+                &.active {
+                    @include change-Color;
+                    .material-icons {
+                        background: url(../../../assets/images/menu-icon-home-hover.svg) no-repeat center left;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-request.svg) no-repeat center left;
+                }
+                &.active {
+                    @include change-Color;
+                    .material-icons {
+                        background: url(../../../assets/images/menu-icon-request-hover.svg) no-repeat center left;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-query.svg) no-repeat center left;
+                }
+                &.active {
+                    @include change-Color;
+                    .material-icons {
+                        background: url(../../../assets/images/menu-icon-query-hover.svg) no-repeat center left;
+                    }
+                }
+            }
+            &:nth-child(4) {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-compliance.svg) no-repeat center left;
+                }
+                &.active {
+                    @include change-Color;
+                    .material-icons {
+                        background: url(../../../assets/images/menu-icon-compliance-hover.svg) no-repeat center left;
+                    }
+                }
+            }
+            &:nth-child(5) {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-reference.svg) no-repeat center left;
+                }
+                &.active {
+                    @include change-Color;
+                    .material-icons {
+                        background: url(../../../assets/images/menu-icon-reference-hover.svg) no-repeat center left;
+                    }
+                }
+            }
+            &:last-child {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-faqs.svg) no-repeat center left;
+                }
+                &.active {
+                    @include change-Color;
+                    .material-icons {
+                        background: url(../../../assets/images/menu-icon-faqs-hover.svg) no-repeat center left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1359px) and (min-width:240px){
+    ul{
+        display: block;
+        list-style-type: none;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
+        li{
+            @include common-font;
+            width: 100%;
+            height: 5.625rem;
+            padding-left: 2.25rem;
+            padding-right: 1.875rem;
+            div{
+                width: 11.25rem;
+                height: 5.625rem;
+                float: left;
+                margin-left: .625rem;
+                font-size: 1.25rem;
+                float: left;
+                line-height: 5.625rem;
+                vertical-align: top;
+            }
+            i{
+                width: 1.75rem;
+                height: 5.625rem;
+                vertical-align:sub;
+                float: left;
+                line-height: 5.625rem;
+                text-align: left;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .main-menu-title{
+        @include common-font;
+        width: 100%;
+        height: 3.125rem;
+        line-height: 3.5rem;
+        padding-left: 2.25rem;
+        padding-right: 1.875rem;
+        .ro_menu_title{
+            line-height: 3.375rem;
+            height: 2.5rem;
+            font-size: 1.125rem;
+        }
+        .ro_menu_btn{
+            float: right;
+            width: 3.125rem;
+            line-height: 3.125rem;
+            height: 2.5rem;
+            font-size: 1.25rem;
+            margin-top: .4375rem;
+            margin-left: 6.25rem;
+            .menu-title-icon{
+                float: left;
+                width: 1.75rem;
+                height: 2.5rem;
+                line-height: 2.5rem;
+                text-align: left;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .bip-nav-wrap{
+        .menu-item{
+            
+            &:hover {
+                opacity: 0.8;
+            }
+            &:first-child{
+                @include change-Color;
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-home.svg) no-repeat center left;
+                }  
+                &.active {
+                    .material-icons {
+                        background: url(../../../assets/images/menu-icon-home-hover.svg) no-repeat center left;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-request.svg) no-repeat center left;
+                }
+            }
+            &:nth-child(3) {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-query.svg) no-repeat center left;
+                }
+            }
+            &:nth-child(4) {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-compliance.svg) no-repeat center left;
+                }
+            }
+            &:nth-child(5) {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-reference.svg) no-repeat center left;
+                }
+            }
+            &:last-child {
+                .material-icons {
+                    background: url(../../../assets/images/menu-icon-faqs.svg) no-repeat center left;
+                }
+            }
+        }
+    }
+}

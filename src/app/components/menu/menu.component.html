@@ -1,0 +1,19 @@
+<aside [ngClass]="{'menu': expandButton,'small-menu': !expandButton}">
+    <div *ngIf="expandButton" class="main-menu-title" (click)="expandMenu()">
+        <span class="ro_menu_title">Main Menu</span>
+        <span class="ro_menu_btn" mat-raised-button>
+            <i class="material-icons">menu</i>
+        </span>
+    </div>
+    <div *ngIf="!expandButton" class="small-main-menu-title" (click)="expandMenu()" mat-raised-button>
+        <span class="ro_menu_btn" mat-raised-button>
+            <i class="material-icons">menu</i>
+        </span>
+    </div>
+    <ul class="bip-nav-wrap">
+        <li *ngFor="let item of menu" (click)="changMenuFn(item)" [ngClass]="{'menu-item': expandButton,'small-menu-item': !expandButton,'active': item.isActive}">
+            <i class="material-icons"></i>
+            <div class="menu-title" *ngIf="expandButton">{{item.title}}</div>
+        </li>
+    </ul>
+</aside>
