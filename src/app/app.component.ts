@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'RO';
+  flag:boolean;
+  onVoted(event){
+    this.flag = event;
+  }
+  ngOnInit(): void {
+  }
 }

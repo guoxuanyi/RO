@@ -1,3 +1,16 @@
-<div class="aside">
-    <app-menu></app-menu>
+<div class="bgDiv">
+    <div [ngClass]="{'menu':!flag,'min-menu':flag}">
+        <app-menu (flag)="onVoted($event)"></app-menu>
+    </div>
+    <div [ngClass]="{'right': !flag,'min-right':flag}">
+        <div class="header">
+            <app-header [expandButton]='flag'></app-header>
+        </div>
+        <div class="main">
+            <app-main [expandButton]='flag'></app-main>
+        </div>
+        <div class="footer">
+            <app-footer [expandButton]='flag'></app-footer>
+        </div>
+    </div>
 </div>

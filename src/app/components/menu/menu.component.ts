@@ -1,4 +1,5 @@
-import { Component, OnInit, SimpleChanges, HostListener } from '@angular/core';
+import { Component, OnInit, SimpleChanges, HostListener, Output,EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-menu',
@@ -15,7 +16,9 @@ export class MenuComponent implements OnInit {
     { id: 6, title: 'FAQs', isActive: false }
   ];
   expandButton: boolean = true;
+  @Output()flag = new EventEmitter<boolean>();
   expandMenu() {
+    this.flag.emit(this.expandButton);
     this.expandButton = !this.expandButton;
   }
   changMenuFn(item) {

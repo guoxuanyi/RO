@@ -1,1 +1,10 @@
-<p>header works!</p>
+<header  [ngClass]="{'header': !expandButton,'min-header':expandButton}">
+    <h1>CORRECT</h1>
+    <ul>
+        <li><span class="material-icons">apps</span></li>
+        <li><span class="material-icons">notifications</span></li>
+        <li><span class="material-icons">help</span></li>
+        <li><span class="material-icons">settings</span></li>
+        <li><img [src]="imgSrc"></li>
+    </ul>
+</header>
